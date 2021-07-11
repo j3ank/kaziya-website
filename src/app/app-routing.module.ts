@@ -27,8 +27,8 @@ const routes: Routes = [
     loadChildren: () => import('./imprint/imprint.module').then(m => m.ImprintModule)
   },
   {
-    path: 'licence',
-    loadChildren: () => import('./licence/licence.module').then(m => m.LicenceModule)
+    path: 'licenses',
+    loadChildren: () => import('./licenses/licenses.module').then(m => m.LicensesModule)
   },
   {
     path: 'logout',
