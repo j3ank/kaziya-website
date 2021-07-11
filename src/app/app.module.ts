@@ -12,12 +12,13 @@ import { AboutUsModule } from './about-us/about-us.module';
 import { ContactModule } from './contact/contact.module';
 import { GroupModule } from './group/group.module';
 import { ImprintModule } from './imprint/imprint.module';
-import { LicenceModule } from './licence/licence.module';
+import { LicensesModule } from './licenses/licenses.module';
 import { LogoutRoutingModule } from './logout/logout-routing.module';
 import { OrderRoutingModule } from './order/order-routing.module';
 import { ProductRoutingModule } from './product/product-routing.module';
 import { ProfileRoutingModule } from './profile/profile-routing.module';
 import { FooterComponent, HeaderComponent } from './shared';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -36,11 +37,12 @@ import { FooterComponent, HeaderComponent } from './shared';
     GroupModule,
     ImprintModule,
     AppRoutingModule,
-    LicenceModule,
+    LicensesModule,
     LogoutRoutingModule,
     OrderRoutingModule,
     ProductRoutingModule,
-    ProfileRoutingModule
+    ProfileRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
