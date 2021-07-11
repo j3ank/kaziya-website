@@ -17,10 +17,13 @@ import { LogoutRoutingModule } from './logout/logout-routing.module';
 import { OrderRoutingModule } from './order/order-routing.module';
 import { ProductRoutingModule } from './product/product-routing.module';
 import { ProfileRoutingModule } from './profile/profile-routing.module';
+import { FooterComponent, HeaderComponent } from './shared';
 
 @NgModule({
   declarations: [
     AppComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
