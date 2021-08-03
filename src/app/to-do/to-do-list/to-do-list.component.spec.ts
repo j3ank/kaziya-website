@@ -7,6 +7,7 @@ import {SharedModule} from "../../shared";
 import {MockService} from "../../core/services/mock.service";
 import {ActivatedRoute} from "@angular/router";
 import {ActivatedRouteStub} from "../../core/services/router-stubs";
+import {RouterTestingModule} from "@angular/router/testing";
 
 describe('ToDoListComponent', () => {
   let component: ToDoListComponent;
@@ -16,12 +17,16 @@ describe('ToDoListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ SharedModule, FormsModule, ActivatedRoute ],
+      imports: [ SharedModule, FormsModule, RouterTestingModule, LocalStorageService ],
       declarations: [ ToDoListComponent, ActivatedRoute, LocalStorageService ],
       providers: [
         { provide: LocalStorageService, useClass: MockService },
         { provide: ToDoService, useClass: MockService },
-        { provide: ActivatedRoute, useClass: ActivatedRouteStub },
+        {
+          provide: ActivatedRoute, useValue: {
+            snapshot: {params: 'auth'}
+          }
+        }
       ]
     })
     .compileComponents();
