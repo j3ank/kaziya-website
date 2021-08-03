@@ -1,0 +1,15 @@
+<div class="container" >
+  <mat-chip-list #chipList aria-label="ToDo selection" class="toDoList">
+    <ng-container *ngFor="let toDo of toDoList">
+      <mat-chip
+        [class.closed]="isToDoClosed(toDo)"
+        (removed)="remove(toDo)"
+        *ngIf="!toDo.isDeleted"
+      >
+        <mat-checkbox class="chipListCheckbox" (change)="changeState(toDo)" [checked]="isToDoClosed(toDo)" [disabled]="isToDoClosed(toDo)"></mat-checkbox>
+        <span>{{ toDo.description }}, {{toDo.expirationDate | date: 'dd.MM.yyyy' }}</span>
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+    </ng-container>
+  </mat-chip-list>
+</div>

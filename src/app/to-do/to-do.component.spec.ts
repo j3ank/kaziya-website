@@ -1,22 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AuthComponent } from './auth.component';
-import {ActivatedRoute} from "@angular/router";
+import { ToDoComponent } from './to-do.component';
 
-describe('AuthComponent', () => {
-  let component: AuthComponent;
-  let fixture: ComponentFixture<AuthComponent>;
+describe('ToDoComponent', () => {
+  let component: ToDoComponent;
+  let fixture: ComponentFixture<ToDoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AuthComponent ],
-      imports: [ ActivatedRoute ]
+      declarations: [ ToDoComponent ],
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AuthComponent);
+    fixture = TestBed.createComponent(ToDoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

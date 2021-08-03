@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import {
   ApiService,
+  LocalStorageService,
+  ToDoService,
 } from './services';
 
 @NgModule({
@@ -11,6 +13,8 @@ import {
   ],
   providers: [
     ApiService,
+    LocalStorageService,
+    ToDoService,
   ],
   declarations: []
 })

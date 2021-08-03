@@ -1,19 +1,23 @@
-<mat-toolbar color="primary">
+<mat-toolbar>
   <mat-toolbar-row>
     <div class="nav">
       <div class="nav-company">
         <h1>
           <a mat-button routerLink="/">
-            Kaziya
+            Home
           </a>
         </h1>
       </div>
       <div class="nav-links">
-        <a mat-button routerLink="/licenses">Lizenzen</a>
+        <a mat-button routerLink="/to-do">ToDoList</a>
+        <a mat-button (click)="clearLocalStorage()">clearLocalStorage</a>
       </div>
+
+      <!--
       <div class="nav-account">
         <a mat-button routerLink="/login">Login</a>
       </div>
+      --->
     </div>
   </mat-toolbar-row>
 </mat-toolbar>

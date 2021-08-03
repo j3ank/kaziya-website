@@ -19,12 +19,13 @@ import { ProductRoutingModule } from './product/product-routing.module';
 import { ProfileRoutingModule } from './profile/profile-routing.module';
 import { FooterComponent, HeaderComponent } from './shared';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToDoModule } from "./to-do/to-do.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +43,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     OrderRoutingModule,
     ProductRoutingModule,
     ProfileRoutingModule,
+    ToDoModule,
     BrowserAnimationsModule
   ],
   providers: [],

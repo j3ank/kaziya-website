@@ -1,0 +1,27 @@
+.mat-chip.mat-standard-chip {
+  background-color: red;
+  height: auto;
+}
+
+.mat-chip.mat-standard-chip.closed {
+  background-color: limegreen;
+}
+
+.chipListCheckbox {
+  margin-right: 8px;
+}
+
+/deep/ .mat-chip-list.toDoList .mat-chip-list-wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: flex-start;
+
+
+  @media (max-width: 1050px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 650px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

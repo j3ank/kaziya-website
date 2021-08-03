@@ -17,7 +17,7 @@ export class AuthComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
   ) {
     this.authForm = this.fb.group({
       userName: ['', Validators.required],

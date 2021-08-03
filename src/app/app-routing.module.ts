@@ -46,6 +46,10 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
   },
+  {
+    path: 'to-do',
+    loadChildren: () => import('./to-do/to-do.module').then(m => m.ToDoModule)
+  },
 ];
 
 @NgModule({
